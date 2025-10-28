@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { podcasts, podcastPlatforms } from '../data';
 import SectionTitle from '../components/SectionTitle';
@@ -18,13 +17,13 @@ const PodcastPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-bg py-16">
+    <div className="bg-bg py-16"> {/* <-- This is the opening <div> tag... */}
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <SectionTitle>Policy in Focus Podcast</SectionTitle>
-           <p className="mt-8 text-lg text-muted max-w-3xl mx-auto">
-            Tune in for insightful conversations with policymakers, researchers, and innovators who are tackling the most pressing challenges in the Global South.
-          </p>
+            <p className="mt-8 text-lg text-muted max-w-3xl mx-auto">
+             Tune in for insightful conversations with policymakers, researchers, and innovators who are tackling the most pressing challenges in the Global South.
+            </p>
         </div>
         
         {/* Latest Episode Hero */}
@@ -82,16 +81,16 @@ const PodcastPage: React.FC = () => {
                     </a>
                   </h3>
                   <p className="text-muted text-sm leading-relaxed mb-4 hidden md:block">{episode.summary}</p>
-                   <a href={`#podcast/${episode.slug}`} onClick={handleNav(`podcast/${episode.slug}`)} className="text-primary font-bold text-sm inline-flex items-center gap-1 group">
+                    <a href={`#podcast/${episode.slug}`} onClick={handleNav(`podcast/${episode.slug}`)} className="text-primary font-bold text-sm inline-flex items-center gap-1 group">
                       Listen Now <span className="transition-transform duration-300 group-hover:translate-x-1 inline-block">&rarr;</span>
-                   </a>
+                    </a>
                 </div>
               </div>
             ))}
           </div>
 
           <aside className="lg:col-span-1 h-fit lg:sticky lg:top-32">
-             <div className="bg-surface rounded-xl border border-border p-6">
+              <div className="bg-surface rounded-xl border border-border p-6">
                 <h3 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
                   <AudioWaveIcon className="h-6 w-6 text-accent" />
                   Subscribe
@@ -108,11 +107,11 @@ const PodcastPage: React.FC = () => {
                         )
                     })}
                 </div>
-             </div>
+              </div>
           </aside>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
